@@ -1,0 +1,3 @@
+rootProject.name = "HiltTest"
+include ':analytics'
+include ':app'
