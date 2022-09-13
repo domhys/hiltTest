@@ -1,4 +1,4 @@
-package be.example.android.analytics.di
+package abc.example.android.app.analytics.di
 
 import dagger.Module
 import dagger.hilt.InstallIn

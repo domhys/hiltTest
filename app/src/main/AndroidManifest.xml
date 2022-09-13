@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  package="be.example.android.app">
+  package="abc.example.android.app">
 
   <application
-    android:name="be.example.android.app.app.MyApplication"
+    android:name="abc.example.android.app.app.MyApplication"
     android:allowBackup="false"
     android:icon="@mipmap/ic_launcher"
     android:label="@string/app_name"
