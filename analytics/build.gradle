@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+    compileSdk = 31
+    buildToolsVersion = "33.0.0"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 31
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    sourceSets {
+        main {
+            java.srcDir("src/main/kotlin")
+            java.srcDirs += ['src/google/kotlin']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            debuggable true
+        }
+    }
+}
+
+dependencies {
+//    implementation platform(Libraries.Google.firebaseBom)
+//    implementation(Libraries.Google.firebaseAnalyticsKtx)
+//    api(Libraries.Google.firebaseCrashlyticsKtx)
+
+    implementation "com.google.dagger:hilt-android:HEAD-SNAPSHOT"
+    kapt "com.google.dagger:hilt-compiler:HEAD-SNAPSHOT"
+
+//    implementation(Libraries.Appsflyer.appsflyer)
+//    implementation(Libraries.Installreferrer.installreferrer)
+
+//    implementation(Libraries.JakeWharton.timber)
+//    implementation(Libraries.Vodeno.encoding)
+}
